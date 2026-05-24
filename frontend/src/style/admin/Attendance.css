@@ -1,0 +1,199 @@
+/* ===========================
+   Attendance Page
+=========================== */
+.attendance-page {
+  padding: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.attendance-page h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ===========================
+   Filters
+=========================== */
+.attendance-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.attendance-filters input,
+.attendance-filters select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.attendance-filters input:focus,
+.attendance-filters select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* ===========================
+   Form Card
+=========================== */
+.attendance-form-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+}
+
+.attendance-form-card h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.attendance-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.attendance-form select,
+.attendance-form input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.attendance-form select:focus,
+.attendance-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Save Button */
+.save-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.save-btn:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   Table
+=========================== */
+.attendance-table {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  overflow-x: auto;
+}
+
+.attendance-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.attendance-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.attendance-table tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.attendance-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* ===========================
+   Action Buttons
+=========================== */
+.edit-btn {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+.edit-btn:hover {
+  background: #d97706;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* ===========================
+   Status Styling
+=========================== */
+.status-present {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.status-absent {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.status-late {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.status-halfday {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .attendance-form {
+    grid-template-columns: 1fr;
+  }
+
+  .attendance-filters {
+    flex-direction: column;
+  }
+}

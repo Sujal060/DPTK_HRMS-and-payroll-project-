@@ -1,0 +1,158 @@
+/* ==============================
+   Container
+============================== */
+.employee-container {
+  width: 95%;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+.employee-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ==============================
+   Form Styling
+============================== */
+.employee-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.employee-form input,
+.employee-form select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.employee-form input:focus,
+.employee-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.employee-form button {
+  padding: 8px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.employee-form button:hover {
+  background-color: #0056b3;
+}
+
+/* ==============================
+   Table Styling
+============================== */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.employee-table thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.employee-table th {
+  font-weight: 600;
+}
+
+.employee-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ==============================
+   Action Buttons
+============================== */
+.employee-table button {
+  padding: 5px 8px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.employee-table button:hover {
+  opacity: 0.85;
+}
+
+/* Pay Button */
+.employee-table button:nth-child(1) {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Delete Button */
+.employee-table button:nth-child(2) {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Payslip Button */
+.employee-table button:last-child {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* ==============================
+   Status Styling
+============================== */
+.employee-table td:nth-child(6) {
+  font-weight: 600;
+}
+
+.employee-table td:contains("Paid") {
+  color: #28a745;
+}
+
+.employee-table td:contains("Generated") {
+  color: #ff9800;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+  .employee-form {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-table th,
+  .employee-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

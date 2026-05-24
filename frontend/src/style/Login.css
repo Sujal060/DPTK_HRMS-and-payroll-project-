@@ -1,0 +1,240 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #11284b 0%, #173a6d 50%, #1d4ed8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* ================= CARD ================= */
+.login-card {
+  width: 400px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 14px;
+  border-top: 5px solid #1e3a8a;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= LOGO ================= */
+.login-logo {
+  width: 150px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* ================= TITLE ================= */
+.login-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 25px;
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+/* ================= INPUT ================= */
+.login-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+.login-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.25);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* ================= OTP INPUT SPECIAL STYLE ================= */
+.login-input[type="text"] {
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ================= BUTTON ================= */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.login-button:hover {
+  background: #2563eb;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+  transform: scale(1.05);
+}
+
+/* Disabled / Loading Button */
+.login-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ================= ERROR & SUCCESS ================= */
+.error-text {
+  color: #ef4444;
+  font-size: 13px;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeInMessage 0.5s forwards;
+}
+
+.success-text {
+  color: #16a34a;
+  font-size: 13px;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeInMessage 0.5s forwards;
+}
+
+/* Fade-in for messages */
+@keyframes fadeInMessage {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= FORGOT LINK ================= */
+.forgot-text {
+  margin-top: 15px;
+  animation: fadeIn 1.3s ease-in-out;
+}
+
+.forgot-text a {
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-text a:hover {
+  text-decoration: underline;
+}
+
+/* ================= OPTIONAL RESEND OTP STYLE ================= */
+.resend-otp {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #64748b;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+.resend-otp span {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.resend-otp span:hover {
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .login-card {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .login-logo {
+    width: 110px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+}
+
+/* ================= OTP TIMER STYLE ================= */
+.timer-text {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.08);
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  animation: pulseTimer 1s infinite alternate;
+}
+
+/* Subtle pulse animation for urgency */
+@keyframes pulseTimer {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+/* ================= RESEND BUTTON (UPDATED PROFESSIONAL STYLE) ================= */
+.resend-button {
+  width: 100%;
+  padding: 10px;
+  background: #f59e0b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.resend-button:hover {
+  background: #d97706;
+  box-shadow: 0 6px 15px rgba(245, 158, 11, 0.25);
+  transform: scale(1.05);
+}
+
+.resend-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Sequential animation delays */
+.animate-delay-1 { animation-delay: 0.2s; }
+.animate-delay-2 { animation-delay: 0.4s; }
+.animate-delay-3 { animation-delay: 0.6s; }
+.animate-delay-4 { animation-delay: 0.8s; }
+.animate-delay-5 { animation-delay: 1s; }
+.animate-delay-6 { animation-delay: 1.2s; }
+.animate-delay-7 { animation-delay: 1.4s; }

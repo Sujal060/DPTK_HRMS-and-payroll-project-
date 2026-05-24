@@ -1,0 +1,406 @@
+/* ===============================
+   Global Page Layout
+================================= */
+.employee-page {
+  padding: 32px;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  transition: 0.3s ease;
+}
+
+/* Dark Mode Support */
+.dashboard.dark .employee-page {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* ===============================
+   Card Container (Glass Premium)
+================================= */
+.employee-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(17, 40, 75, 0.08);
+  transition: all 0.3s ease;
+}
+
+.dashboard.dark .employee-card {
+  background: rgba(30, 41, 59, 0.85);
+  border: 1px solid #334155;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(17, 40, 75, 0.15);
+}
+
+/* ===============================
+   Card Header
+================================= */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.card-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #11284b, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   Header Buttons
+================================= */
+.header-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+/* Shared Button Style */
+.add-btn,
+.generate-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+/* Add Button */
+.add-btn {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: white;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.4);
+}
+
+/* Generate Button */
+.generate-btn {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  color: white;
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.35);
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(34, 197, 94, 0.4);
+}
+
+/* ===============================
+   Filters Section
+================================= */
+.filters-section {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.filters-section input,
+.filters-section select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.dashboard.dark .filters-section input,
+.dashboard.dark .filters-section select {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+.filters-section input:focus,
+.filters-section select:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+  outline: none;
+}
+
+/* ===============================
+   Table Styling
+================================= */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard.dark table {
+  background: #1e293b;
+}
+
+/* Table Header */
+thead {
+  background: linear-gradient(90deg, #11284b, #1d4ed8);
+}
+
+thead th {
+  padding: 15px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* Table Body */
+tbody td {
+  padding: 15px 14px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.dashboard.dark tbody td {
+  color: #e2e8f0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: 0.25s ease;
+}
+
+.dashboard.dark tbody tr {
+  border-bottom: 1px solid #334155;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+  transform: scale(1.01);
+}
+
+.dashboard.dark tbody tr:hover {
+  background: #334155;
+}
+
+/* ===============================
+   Status Badges (Improved)
+================================= */
+.status-active,
+.status-inactive {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.status-active {
+  background: rgba(22, 163, 74, 0.12);
+  color: #15803d;
+}
+
+.status-inactive {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+/* ===============================
+   Action Buttons (Premium)
+================================= */
+td button {
+  margin-right: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* Explicit Action Button Classes */
+.view-btn, 
+td button:nth-child(1) {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  color: white;
+}
+
+.edit-btn, 
+td button:nth-child(2) {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  color: white;
+}
+
+/* Fix for your Delete Button */
+.delete-btn, 
+.btn-danger,
+td button:nth-child(3) {
+  background: linear-gradient(90deg, #ef4444, #f87171) !important;
+  color: white !important;
+}
+
+/* Ensure consistent hover for all action buttons */
+.view-btn:hover, 
+.edit-btn:hover, 
+.delete-btn:hover, 
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+}
+
+td button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   Empty State
+================================= */
+tbody tr td[colspan] {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ===============================
+   Responsive
+================================= */
+@media (max-width: 768px) {
+  .filters-section {
+    flex-direction: column;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 18px;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  tbody td {
+    padding: 6px 0;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    color: #475569;
+  }
+}
+
+/* ===============================
+   Attendance Table Improvements
+================================= */
+
+.attendance-table td,
+.attendance-table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.attendance-table select,
+.attendance-table input[type="time"],
+.attendance-table input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.attendance-table select:focus,
+.attendance-table input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+.row-present {
+  background: #ecfdf5;
+}
+
+.row-absent {
+  background: #fef2f2;
+}
+
+.row-half {
+  background: #fffbeb;
+}
+
+.row-leave {
+  background: #eff6ff;
+}
+
+.row-save-btn {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.row-save-btn:hover {
+  opacity: 0.85;
+}
+
+/* ===============================
+   Textarea Styling
+================================= */
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  resize: vertical; /* allow vertical resizing only */
+  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #334155;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Dark Mode */
+.dashboard.dark textarea {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+/* Focus State */
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  transform: scale(1.01);
+}
